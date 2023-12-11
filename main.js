@@ -114,6 +114,13 @@ function insertCards(cards, resultLoader, navigationButton, panorama, sliderNav,
 
         form.reset() ;
       }
+      item.querySelector('img').onerror = () => {
+        // Masque le loader et affiche les boutons de navigation
+        resultLoader.style.display = "none" ;
+        navigationButton.style.display = "flex" ;
+
+        form.reset() ;
+      }
     }
 
     panorama.append(item)
