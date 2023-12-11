@@ -1,0 +1,198 @@
+form {
+  text-align: center;
+}
+
+input {
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px 25px;
+  margin-bottom: 10px;
+}
+
+button {
+  position: relative;
+  border: none;
+  outline: none;
+  background-color: cornflowerblue;
+  opacity: 0.85;
+  padding: 15px 50px;
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 1;
+}
+
+.btn-onload {
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 10px);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  opacity: 0;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-top: 2px solid white;
+}
+
+.onload {
+  opacity: 1;
+  animation: spinner 1s ease 0s infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.container {
+  font-family: Helvetica, sans-serif;
+  width: 375px;
+  margin: 20px auto;
+}
+
+.results {
+  margin-top: 10px;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+.results .loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  display: none;
+}
+.results .loader::after {
+  content: "";
+  position: absolute;
+  visibility: visible;
+  top: 10px;
+  z-index: 99;
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-top: 2px solid black;
+  animation: spinner 1s ease 0s infinite both;
+}
+.results .error {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.5);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: white;
+}
+.results .error h2 {
+  margin: 10px;
+  text-align: center;
+}
+.results .error p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.results .panorama {
+  width: 1000%;
+  min-height: 200px;
+  display: flex;
+}
+.results .panorama .item {
+  width: 10%;
+}
+.results .panorama .item h2 {
+  font-weight: normal;
+  font-size: 14pt;
+  text-align: center;
+  margin: 10px 0;
+}
+.results .panorama .item a {
+  text-decoration: none;
+  color: rgb(11, 89, 232);
+  opacity: 0.85;
+}
+.results .panorama .item a:hover {
+  opacity: 1;
+}
+.results .panorama .item p {
+  text-align: justify;
+  font-size: 12pt;
+}
+.results .panorama .item .img-container {
+  height: 220px;
+}
+.results .panorama .item .img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+.slider-nav li {
+  margin-left: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border: 2px solid black;
+}
+.slider-nav .active {
+  position: relative;
+}
+.slider-nav .active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background-color: black;
+  transform: scale(0.9);
+}
+
+.navigation-btn {
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  justify-content: space-between;
+  display: none;
+}
+.navigation-btn div {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.navigation-btn .next {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

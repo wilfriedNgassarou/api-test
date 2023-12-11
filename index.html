@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Api Test</title>
+</head>
+<body>
+  <div class="container">
+    <form action="#">
+      <input type="text" placeholder="Titre de votre recherche..." required> <br>
+      <button type="submit">
+        Rechercher
+        <div class="btn-onload"></div>
+      </button>
+    </form>
+    <div class="results">
+      <div class="panorama"></div>
+      <ul class="slider-nav">
+      </ul>
+      <div class="navigation-btn">
+        <div data-action="prec" class="left"><</div>
+        <div data-action="next" class="right">></div>
+      </div>
+      <div class="loader">
+      </div>
+      <div class="error">
+        <h2>Erreur...</h2>
+        <p>Veuillez réessayer...</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
